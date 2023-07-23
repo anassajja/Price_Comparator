@@ -38,22 +38,21 @@ async function scrapePrice(url, productName) {
         }
       });
   
-      // If the product is not found, return null
       if (!foundProduct) {
         console.log(`Product "${productName}" not found on ${url}`);
-        return null;
-      }
-  
-      // Return the extracted price
-      console.log(`Scraping ${url} for price...`);
-      console.log(`Product price for ${productName}: ${price}`);
-      return price || "-";
-    } catch (error) {
-      console.error(`Error scraping ${url}:`, error);
-      return "-";
+        return "-";
     }
 
-  } 
+    // Return the extracted price
+    console.log(`Scraping ${url} for price...`);
+    console.log(`Product price for ${productName}: ${price}`);
+    return price || "-";
+} catch (error) {
+    console.error(`Error scraping ${url}:`, error);
+    return "-";
+}
+}
+
   
 // Function to fetch prices for all websites and return them as an object
 async function fetchPrices() {
