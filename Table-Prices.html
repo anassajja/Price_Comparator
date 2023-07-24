@@ -63,8 +63,8 @@
             <th>moussasoft</th>
             <th>electromaroc</th>
             <th>microcell</th>
-            <th>raspberry.ma</th>
-            <th>electromashop.com</th>
+            <th>raspberry</th>
+            <th>electromashop</th>
             <th>shop4makers</th>
             <th>jumia</th>
         </tr>
@@ -78,8 +78,68 @@
             <td id="moussasoft">-</td>
             <td id="electromaroc">-</td>
             <td id="microcell">-</td>
-            <td id="raspberry.ma">-</td>
-            <td id="electromashop.com">-</td>
+            <td id="raspberry">-</td>
+            <td id="electromashop">-</td>
+            <td id="shop4makers">-</td>
+            <td id="jumia">-</td>
+        </tr>
+        <tr>
+            <td>raspberry-pi 3 B+</td>
+            <td id="atmostech">-</td>
+            <td id="marocproduits">-</td>
+            <td id="micro-planet">-</td>
+            <td id="shoppingmaroc">-</td>
+            <td id="marocarduino">-</td>
+            <td id="moussasoft">-</td>
+            <td id="electromaroc">-</td>
+            <td id="microcell">-</td>
+            <td id="raspberry">-</td>
+            <td id="electromashop">-</td>
+            <td id="shop4makers">-</td>
+            <td id="jumia">-</td>
+        </tr>
+        <tr>
+            <td>LCD1602 Rétroéclairage vert jaune</td>
+            <td id="atmostech">-</td>
+            <td id="marocproduits">-</td>
+            <td id="micro-planet">-</td>
+            <td id="shoppingmaroc">-</td>
+            <td id="marocarduino">-</td>
+            <td id="moussasoft">-</td>
+            <td id="electromaroc">-</td>
+            <td id="microcell">-</td>
+            <td id="raspberry">-</td>
+            <td id="electromashop">-</td>
+            <td id="shop4makers">-</td>
+            <td id="jumia">-</td>
+        </tr>
+        <tr>
+            <td>LCD1602 Écran LCD Blindage Rétroéclairage Bleu</td>
+            <td id="atmostech">-</td>
+            <td id="marocproduits">-</td>
+            <td id="micro-planet">-</td>
+            <td id="shoppingmaroc">-</td>
+            <td id="marocarduino">-</td>
+            <td id="moussasoft">-</td>
+            <td id="electromaroc">-</td>
+            <td id="microcell">-</td>
+            <td id="raspberry">-</td>
+            <td id="electromashop">-</td>
+            <td id="shop4makers">-</td>
+            <td id="jumia">-</td>
+        </tr>
+        <tr>
+            <td>LCD12864 Yellow Green</td>
+            <td id="atmostech">-</td>
+            <td id="marocproduits">-</td>
+            <td id="micro-planet">-</td>
+            <td id="shoppingmaroc">-</td>
+            <td id="marocarduino">-</td>
+            <td id="moussasoft">-</td>
+            <td id="electromaroc">-</td>
+            <td id="microcell">-</td>
+            <td id="raspberry">-</td>
+            <td id="electromashop">-</td>
             <td id="shop4makers">-</td>
             <td id="jumia">-</td>
         </tr>
@@ -90,7 +150,7 @@
         // Function to fetch and populate prices from the server
         async function fetchAndPopulatePrices() {
             try {
-                const response = await fetch('/api/prices?productName=Arduino%20Uno%20R3');
+                const response = await fetch('/api/prices?productName=Arduino%20UNO%20R3');
                 const data = await response.json();
                 console.log(data); // Check if the data is correctly fetched from the server
 
@@ -103,8 +163,8 @@
                 document.getElementById('moussasoft').innerText = data['https://www.moussasoft.com/'];
                 document.getElementById('electromaroc').innerText = data['http://electromaroc.com/'];
                 document.getElementById('microcell').innerText = data['https://www.microcell.ma/'];
-                document.getElementById('raspberry.ma').innerText = data['https://www.raspberry.ma/'];
-                document.getElementById('electromashop.com').innerText = data['https://electromashop.com/'];
+                document.getElementById('raspberry').innerText = data['https://www.raspberry.ma/'];
+                document.getElementById('electromashop').innerText = data['https://electromashop.com/'];
                 document.getElementById('shop4makers').innerText = data['https://shop4makers.com/'];
                 document.getElementById('jumia').innerText = data['https://www.jumia.ma/'];
             } catch (error) {
