@@ -77,7 +77,7 @@ async function fetchPrices() {
     'https://www.raspberry.ma/',
     'https://www.microcell.ma/',
     'https://www.jumia.ma/',
-    // Add the URLs of the 11 e-commerce websites here
+    // Add the URLs of the 12 e-commerce websites here
   ];
 
   const productPrices = {};
@@ -85,7 +85,9 @@ async function fetchPrices() {
   for (const url of urls) {
     const paginationUrls = [
       // Add the pagination URLs for each website here
-      ['https://atmostech.ma/index.php?route=product/product&product_id=50', 'https://atmostech.ma/index.php?route=product/product&product_id=51', 'https://atmostech.ma/index.php?route=product/product&product_id=57']
+      ['https://atmostech.ma/index.php?route=product/product&product_id=50', 
+      'https://atmostech.ma/index.php?route=product/product&product_id=51', 
+      'https://atmostech.ma/index.php?route=product/product&product_id=57']
     ];
 
     const price = await scrapePrice(url, 'Arduino UNO R3', paginationUrls);
@@ -96,7 +98,7 @@ async function fetchPrices() {
   console.log(productPrices);
 
   // Save the prices to a JSON file (data.json) on the server
-  fs.writeFileSync(__dirname + '/data.json', JSON.stringify(productPrices, null, 2));
+  fs.writeFileSync(__dirname + '/Backend/data.json', JSON.stringify(productPrices, null, 2));
 
   return productPrices;
 }
